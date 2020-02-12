@@ -50,7 +50,10 @@ module.exports = {
             },
             {
                 test: /\.pug$/i,
-                loader: "pug-loader"
+                loader: "pug-loader",
+                options: {
+                    pretty: true
+                }
             },
             {
                 test: /\.(png|jpe?g|gif|svg)$/i,
@@ -149,7 +152,8 @@ module.exports = {
         ]),
         ...PAGES.map(page => new HtmlWebpackPlugin({
             template: `${PAGES_DIR}/${page}`,
-            filename: `./${page.replace(/\.pug/,'.html')}`
+            filename: `./html/${page.replace(/\.pug/,'.html')}`,
+            minify: false
         }))
     ],
 };

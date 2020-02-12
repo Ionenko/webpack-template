@@ -1,7 +1,7 @@
 {
-    "name": "webpack-template",
+    "name": "OhtaHouse",
     "version": "1.0.0",
-    "description": "webpack front-end template",
+    "description": "Ohta House landing page",
     "main": "index.js",
     "browserslist": [
         "> 1%",
@@ -51,7 +51,5 @@
         "webpack-dev-server": "^3.10.1",
         "webpack-merge": "^4.2.2"
     },
-    "dependencies": {
-        "jquery": "^3.4.1"
-    }
+    "dependencies": {}
 }

@@ -1,7 +1,1 @@
-import $ from 'jquery';
-
-let add = (a, b) => a + b;
-
-console.log(add(2,8));
-
-console.log($('.header'));
+console.log('scripts');

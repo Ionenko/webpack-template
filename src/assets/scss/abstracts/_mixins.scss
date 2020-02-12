@@ -1,3 +1,11 @@
+@mixin clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
 // px to rem
 @function rem($pixels, $context: $mainFontSize) {
   @if (unitless($pixels)) {
@@ -23,18 +31,6 @@
 
 @mixin letterspacing( $tracking ){
   letter-spacing: ( $tracking / 1000 ) * 1em;
-}
-
-@mixin clearfix {
-  &:before,
-  &:after {
-    content: "";
-    display: table;
-  }
-
-  &:after {
-    clear: both;
-  }
 }
 
 @mixin box-sizing($boxmodel) {
