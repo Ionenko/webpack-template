@@ -14,11 +14,9 @@ html(lang='en')
         block head
 
     body(class=pageClass)
-        .wrapper
-            include ../includes/modules/header
-            .content-wrapper
-                main
-                    block content
-            include ../includes/modules/footer
+        include ../includes/modules/header
+        main
+            block content
+        include ../includes/modules/footer
 
         block script

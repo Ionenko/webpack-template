@@ -1,11 +1,11 @@
 // Font
-$mainFont                : 'HelveticaNeueCyr', Arial, sans-serif;
+$mainFont                : 'Lato', Arial, sans-serif;
 
 // Size
 $mainFontColor           : #fff;
-$mainFontSize            : 15px;
+$mainFontSize            : 1.6rem;
 $mainFontWeight          : 400;
-$mainLineHeight          : 1.6em;
+$mainLineHeight          : 1.6rem;
 
 $smFontSize              : 13px;
 $lgFontSize              : 24px;
@@ -42,3 +42,22 @@ $border-base             : #fff;
 $border-light            : #E4E7ED;
 $border-lighter          : #EBEEF5;
 $border-lightex          : #F2F6FC;
+
+$color-primary: #7ed56f;
+$color-primary-light: #55c57a;
+$color-primary-dark: #28b485;
+
+$color-grey-light-1: #f7f7f7;
+$color-grey-dark: #777777;
+$color-white: #ffffff;
+$color-black: #000;
+
+//font
+
+$default-font-size: 1.6rem;
+
+//grid
+
+$grid-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-horizontal: 6rem;

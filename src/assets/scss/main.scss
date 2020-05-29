@@ -1,118 +1,18 @@
-@import "utils/libs";
-@import "utils/vars";
-@import "utils/mixins";
-@import "utils/fonts";
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
 @import "utils/reset";
-@import "utils/icons";
 
-html {
-    line-height: $mainLineHeight;
-    font-size: $mainFontSize;
-    color: $mainFontColor;
+@import "base/base";
+@import "base/animations";
+@import "base/typography";
+@import "base/utilities";
 
-    @media screen and (max-width: $desktopWidth) {
-        font-size: 16px;
-    }
-    @media screen and (max-width: $tableWidth) {
-        font-size: 15px;
-    }
-    @media screen and (max-width: $phoneWidth) {
-        font-size: 14px;
-    }
-}
+@import "components/button";
 
-body {
-    margin: 0;
-    padding: 0;
-    font-family: $mainFont;
-    font-size: $mainFontSize;
-    font-weight: $mainFontWeight;
-    line-height: normal;
-    min-width: 320px;
-    overflow-x: hidden;
-    background: $default-color;
-    -webkit-text-size-adjust: 100%;
-    -moz-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-    text-size-adjust: 100%;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
+@import "layout/grid";
+@import "layout/header";
+@import "layout/footer";
 
-*, *:before, *:after {
-    box-sizing: border-box;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    margin: 0;
-}
-
-a {
-    text-decoration: none;
-}
-
-ul, li {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
-
-section, .section {
-    position: relative;
-
-    @media screen and (max-width: $desktopWidth) {
-        padding: 36px 0;
-    }
-    @media screen and (max-width: $desktopWidth) {
-        padding: 28px 0;
-    }
-    @media screen and (max-width: $desktopWidth) {
-        padding: 20px 0;
-    }
-}
-
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    min-height: 100vh;
-}
-
-.content-wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-.container {
-    width: 100%;
-    flex: 0 0 auto;
-    position: relative;
-    margin: 0 auto;
-    max-width: $desktopWidth;
-    padding: 0 15px;
-
-    @media only screen and (min-width: $phoneWidth) {
-        width: $phoneWidth  - 30;
-    }
-
-    @media only screen and (min-width: $tableWidth) {
-        width: $tableWidth  - 30;
-    }
-
-    @media only screen and (min-width: $smDesktopWidth) {
-        width: $smDesktopWidth - 30;
-    }
-
-    @media only screen and (min-width: $desktopWidth) {
-        width: $desktopWidth - 30;
-    }
-}
-
-//Base
-@import "utils/base";
-//UI
-@import "ui/base";
-// Modules
- @import "modules/header";
- @import "modules/footer";
+@import "pages/home";

@@ -1,7 +1,7 @@
 {
-    "name": "webpack-template",
+    "name": "template",
     "version": "1.0.0",
-    "description": "webpack front-end template",
+    "description": "Webpack template",
     "main": "index.js",
     "browserslist": [
         "> 1%",
