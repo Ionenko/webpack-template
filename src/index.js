@@ -1,5 +1,6 @@
-import $ from 'jquery';
-global.jQuery = global.$ = $;
+// * if you need Jquery
+// import $ from 'jquery';
+// global.jQuery = global.$ = $;
 
 // import css
 import './assets/css/main.css';

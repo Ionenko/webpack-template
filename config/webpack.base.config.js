@@ -19,12 +19,12 @@ module.exports = {
         paths: PATHS
     },
     entry: {
+        // app: ['@babel/polyfill', PATHS.src]
         app: PATHS.src
     },
     output: {
         filename: `${PATHS.assets}js/[name].[Chunkhash].js`,
-        path: PATHS.dist,
-        publicPath: '/'
+        path: PATHS.dist
     },
     optimization: {
         splitChunks: {
@@ -46,11 +46,14 @@ module.exports = {
             {
                 test: /\.js$/i,
                 exclude: /node_modules/,
-                loader: "babel-loader"
+                loader: "babel-loader",
             },
             {
                 test: /\.pug$/i,
-                loader: "pug-loader"
+                loader: "pug-loader",
+                options: {
+                    pretty: true
+                }
             },
             {
                 test: /\.(png|jpe?g|gif|svg)$/i,
@@ -63,7 +66,7 @@ module.exports = {
                 test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/i,
                 loader: "file-loader",
                 options: {
-                    name: '[name].[ext]'
+                    name: './[name].[ext]'
                 }
             },
             {
@@ -126,7 +129,7 @@ module.exports = {
     },
     resolve: {
         alias: {
-            '~': 'src'
+            '~': 'src',
         }
     },
     plugins: [
@@ -149,7 +152,8 @@ module.exports = {
         ]),
         ...PAGES.map(page => new HtmlWebpackPlugin({
             template: `${PAGES_DIR}/${page}`,
-            filename: `./${page.replace(/\.pug/,'.html')}`
+            filename: `./${page.replace(/\.pug/,'.html')}`,
+            minify: false
         }))
     ],
 };
